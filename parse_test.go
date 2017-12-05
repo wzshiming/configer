@@ -5,7 +5,7 @@ import (
 )
 
 var parseData = []string{
-	`AB: ss`,
+	`ab: ss`,
 	`{"AB": "ss"}`,
 	`<xml><AB>ss</AB></xml>`,
 	`AB = "ss"`,

@@ -14,9 +14,11 @@ var (
 		"yml":  yamlUnmarshal,
 		"toml": tomlUnmarshal,
 		"ini":  iniUnmarshal,
+		"hcl":  hclUnmarshal,
 	}
 	parseList = []func(data []byte, v interface{}) error{
 		jsonUnmarshal,
+		hclUnmarshal,
 		xmlUnmarshal,
 		tomlUnmarshal,
 		yamlUnmarshal,
