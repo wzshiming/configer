@@ -1,6 +1,7 @@
 package configer
 
 import (
+	"fmt"
 	"os"
 	"reflect"
 	"strings"
@@ -62,17 +63,35 @@ func processTagsStruct(configValue reflect.Value) error {
 		}
 
 		ts := strings.Split(tagvalue, ",")
+		if len(ts) > 1 {
+			for _, v := range ts[1:] {
+				switch v {
+				case "env":
+					envname := fieldStruct.Tag.Get("env")
+					if envname == "" {
+						envname = name
+					}
 
-		if len(ts) >= 2 && ts[1] == "env" {
-			envname := fieldStruct.Tag.Get("env")
-			if envname == "" {
-				envname = name
-			}
+					// 从 环境变量里取值
+					if value := os.Getenv(envname); value != "" {
+						if err := yamlUnmarshal([]byte(value), field.Addr().Interface()); err != nil {
+							return err
+						}
+					}
+				case "load":
+					loadf := fieldStruct.Tag.Get("load")
+					if loadf == "" {
+						continue
+					}
+					val := configValue.FieldByName(loadf)
 
-			// 从 环境变量里取值
-			if value := os.Getenv(envname); value != "" {
-				if err := yamlUnmarshal([]byte(value), field.Addr().Interface()); err != nil {
-					return err
+					for field.Kind() == reflect.Ptr {
+						field.Set(reflect.New(field.Type().Elem()))
+						field = field.Elem()
+					}
+					if err := Load(field.Addr().Interface(), fmt.Sprint(val.Interface())); err != nil {
+						return err
+					}
 				}
 			}
 		}
