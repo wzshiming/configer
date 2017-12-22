@@ -86,7 +86,9 @@ func processTagsStruct(configValue reflect.Value) error {
 					val := configValue.FieldByName(loadf)
 
 					for field.Kind() == reflect.Ptr {
-						field.Set(reflect.New(field.Type().Elem()))
+						if field.IsNil() {
+							field.Set(reflect.New(field.Type().Elem()))
+						}
 						field = field.Elem()
 					}
 					if err := Load(field.Addr().Interface(), fmt.Sprint(val.Interface())); err != nil {
