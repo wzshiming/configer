@@ -6,14 +6,6 @@ Golang Configuration tool that support INI, XML, YAML, JSON, HCL, TOML, Shell En
 go get -u -v gopkg.in/configer.v1
 ```
 
-## Usage
-
-``` golang
-// Config load
-func Load(v interface{}, cfgpaths ...string) error // Load data and process tag data
-func ProcessTags(config interface{}) error // Process tag data
-```
-
 ## Priority 
 env > default > conf
 
