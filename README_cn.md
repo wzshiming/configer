@@ -11,14 +11,11 @@ go get -u -v gopkg.in/configer.v1
 
 ## 使用
 
-[API Documentation](http://godoc.org/gopkg.in/ffmt.v1)
+[API 文档](http://godoc.org/gopkg.in/configer.v1)
 
-## 优先级 
-env > default > conf
+[示例](./examples/main.go)
 
-## 示例
-
-[examples](./examples/main.go)
+优先级: env > default > conf
 
 ``` golang
 package main

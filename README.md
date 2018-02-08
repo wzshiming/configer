@@ -11,14 +11,11 @@ go get -u -v gopkg.in/configer.v1
 
 ## Usage
 
-[API Documentation](http://godoc.org/gopkg.in/ffmt.v1)
+[API Documentation](http://godoc.org/gopkg.in/configer.v1)
 
-## Priority 
-env > default > conf
+[Examples](./examples/main.go)
 
-## Examples
-
-[examples](./examples/main.go)
+Priority: env > default > conf
 
 ``` golang
 package main
