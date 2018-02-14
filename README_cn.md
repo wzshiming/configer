@@ -1,5 +1,5 @@
 # configer
-Golang配置工具，支持INI，XML，YAML，JSON，HCL，TOML，Shell环境
+配置文件加载，支持INI，XML，YAML，JSON，HCL，TOML，Shell环境
 
  - [English](./README.md)
  - [简体中文](./README_cn.md)

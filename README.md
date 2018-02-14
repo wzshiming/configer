@@ -1,5 +1,5 @@
 # configer
-Golang Configuration tool that support INI, XML, YAML, JSON, HCL, TOML, Shell Environment
+Configuration loader that support INI, XML, YAML, JSON, HCL, TOML, Shell Environment
 
  - [English](./README.md)
  - [简体中文](./README_cn.md)
