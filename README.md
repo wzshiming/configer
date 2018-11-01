@@ -1,19 +1,21 @@
 # configer
+
 Configuration loader that support INI, XML, YAML, JSON, HCL, TOML, Shell Environment
 
- - [English](./README.md)
- - [简体中文](./README_cn.md)
- 
+- [English](https://github.com/wzshiming/configer/blob/master/README.md)
+- [简体中文](https://github.com/wzshiming/configer/blob/master/README_cn.md)
+
 ## Install
+
 ``` bash
-go get -u -v gopkg.in/configer.v1
+go get -u -v github.com/wzshiming/configer
 ```
 
 ## Usage
 
-[API Documentation](http://godoc.org/gopkg.in/configer.v1)
+[API Documentation](http://godoc.org/github.com/wzshiming/configer)
 
-[Examples](./examples/main.go)
+[Examples](https://github.com/wzshiming/configer/blob/master/examples/main.go)
 
 Priority: env > default > conf
 
@@ -92,7 +94,4 @@ With examples1.json:
 
 ## MIT License
 
-Copyright © 2017-2018 wzshiming<[https://github.com/wzshiming](https://github.com/wzshiming)>.
-
-MIT is open-sourced software licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
+Pouch is licensed under the MIT License. See [LICENSE](https://github.com/wzshiming/configer/blob/master/LICENSE) for the full license text.

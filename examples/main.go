@@ -1,7 +1,7 @@
 package main
 
 import (
-	configer "gopkg.in/configer.v1"
+	configer "github.com/wzshiming/configer"
 	ffmt "gopkg.in/ffmt.v1"
 )
 

@@ -1,19 +1,21 @@
 # configer
+
 配置文件加载，支持INI，XML，YAML，JSON，HCL，TOML，Shell环境
 
- - [English](./README.md)
- - [简体中文](./README_cn.md)
+- [English](https://github.com/wzshiming/configer/blob/master/README.md)
+- [简体中文](https://github.com/wzshiming/configer/blob/master/README_cn.md)
 
 ## 安装
+
 ``` bash
-go get -u -v gopkg.in/configer.v1
+go get -u -v github.com/wzshiming/configer
 ```
 
 ## 使用
 
-[API 文档](http://godoc.org/gopkg.in/configer.v1)
+[API 文档](http://godoc.org/github.com/wzshiming/configer)
 
-[示例](./examples/main.go)
+[示例](https://github.com/wzshiming/configer/blob/master/examples/main.go)
 
 优先级: env > default > conf
 
@@ -21,7 +23,7 @@ go get -u -v gopkg.in/configer.v1
 package main
 
 import (
-	configer "gopkg.in/configer.v1"
+	configer "github.com/wzshiming/configer"
 	ffmt "gopkg.in/ffmt.v1"
 )
 
@@ -92,6 +94,4 @@ func examples1() {
 
 ## MIT许可证
 
-版权所有©2017-2018 wzshiming <[https://github.com/wzshiming](https://github.com/wzshiming)>。
-
-MIT是[MIT许可证](https://opensource.org/licenses/MIT)许可的开源软件。
+软包根据MIT License。有关完整的许可证文本，请参阅[LICENSE](https://github.com/wzshiming/configer/blob/master/LICENSE)。
