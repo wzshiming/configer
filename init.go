@@ -1,4 +1,4 @@
-package configer // import "gopkg.in/configer.v1"
+package configer
 
 import (
 	"encoding/json"
